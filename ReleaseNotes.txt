@@ -1,0 +1,6 @@
+﻿<h3>LatchDotNetNukePlugin</h3>
+<p class="Contributor">
+	Eleven Paths <br />
+	<a href="mailto:elevenpaths@elevenpaths.com">elevenpaths@elevenpaths.com</a><br />
+	<a href=http://www.latch.elevenpaths.com>http://www.latch.elevenpaths.com</a><br />
+</p>

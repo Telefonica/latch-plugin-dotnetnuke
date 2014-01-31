@@ -1,0 +1,133 @@
+﻿<dotnetnuke type="Package" version="1.0">
+  <packages>
+    <package name="DotNetNuke.LatchDotNetNukePlugin" type="Module" version="1.0.0">
+      <friendlyName>Latch Plugin</friendlyName>
+      <description>Latch plugin for DotNetuke</description>
+      <iconFile />
+      <owner>
+        <name>Eleven Paths</name>
+        <organization>Eleven Paths</organization>
+        <url>http://www.latch.elevenpaths.com</url>
+        <email>elevenpaths@elevenpaths.com</email>
+      </owner>
+      <license src="License.txt"></license>
+      <releaseNotes src="ReleaseNotes.txt"></releaseNotes>
+      <components>
+        <component type="Module">
+          <desktopModule>
+            <moduleName>LatchDotNetNukePlugin</moduleName>
+            <foldername>LatchDotNetNukePlugin</foldername>
+            <businessControllerClass />
+            <supportedFeatures />
+            <moduleDefinitions>
+              <moduleDefinition>
+                <friendlyName>View</friendlyName>
+                <definitionName>View</definitionName>
+                <defaultCacheTime>0</defaultCacheTime>
+                <moduleControls>
+                  <moduleControl>
+                    <controlKey />
+                    <controlSrc>DesktopModules/LatchDotNetNukePlugin/View.ascx</controlSrc>
+                    <supportsPartialRendering>False</supportsPartialRendering>
+                    <controlTitle />
+                    <controlType>View</controlType>
+                    <iconFile />
+                    <helpUrl />
+                    <supportsPopUps>False</supportsPopUps>
+                    <viewOrder>0</viewOrder>
+                  </moduleControl>
+                  <moduleControl>
+                    <controlKey>settings</controlKey>
+                    <controlSrc>DesktopModules/LatchDotNetNukePlugin/Settings.ascx</controlSrc>
+                    <supportsPartialRendering>False</supportsPartialRendering>
+                    <controlTitle>Settings</controlTitle>
+                    <controlType>Edit</controlType>
+                    <iconFile />
+                    <helpUrl />
+                    <supportsPopUps>False</supportsPopUps>
+                  </moduleControl>
+                </moduleControls>
+              </moduleDefinition>
+            </moduleDefinitions>
+          </desktopModule>
+        </component>
+        <component type="Config">
+          <config>
+            <configFile>web.config</configFile>
+            <install>
+              <configuration>
+                <nodes>
+                  <node path="/configuration/configSections" action="update" key="path" collision="overwrite">
+                    <section name="latchSettings" type="LatchMembership.LatchSettingsSection, LatchMembership, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null"  />
+                  </node>
+                  <node path="/configuration/system.web/membership[@defaultProvider='AspNetSqlMembershipProvider']" action="remove" />
+                  <node path="/configuration" action="update" key="path" collision="overwrite">
+                    <latchSettings innerMembershipProvider="AspNetSqlMembershipProvider" appId="12345678901234567890" appSecret="1234567890123456789012345678901234567890"/>  />
+                  </node>
+                  <node path="/configuration/system.web" action="update" key="path" collision="overwrite">
+                    <membership defaultProvider="LatchMembershipProvider" userIsOnlineTimeWindow="15"></membership>
+                  </node>
+                  <node path="/configuration/system.web/membership" action="update" key="path" collision="overwrite">
+                    <providers></providers>
+                  </node>
+                  <node path="/configuration/system.web/membership/providers" action="update" key="path" collision="overwrite">
+                    <clear/>
+                  </node>
+                  <node path="/configuration/system.web/membership/providers" action="update" key="path" collision="overwrite">
+                    <add name="LatchMembershipProvider" type="LatchMembership.LatchMembershipProvider, LatchMembership, Version=1.0.0.0, Culture=neutral" />
+                  </node>
+                  <node path="/configuration/system.web/membership/providers" action="update" key="path" collision="overwrite">
+                    <add name="AspNetSqlMembershipProvider" type="System.Web.Security.SqlMembershipProvider" connectionStringName="SiteSqlServer" enablePasswordRetrieval="false" enablePasswordReset="true" requiresQuestionAndAnswer="false" minRequiredPasswordLength="7" minRequiredNonalphanumericCharacters="0" requiresUniqueEmail="false" passwordFormat="Hashed" applicationName="DotNetNuke" description="Stores and retrieves membership data from the local Microsoft SQL Server database" />
+                  </node>
+                </nodes>
+              </configuration>
+            </install>
+            <uninstall>
+              <configuration>
+                <nodes>
+                  <node path="/configuration/configSections/section[@name='latchSettings']" action="remove"/>
+                  <node path="/configuration/latchSettings[@innerMembershipProvider='AspNetSqlMembershipProvider']" action="remove"/>
+                  <node path="/configuration/system.web/membership[@defaultProvider='LatchMembershipProvider']" action="remove" />
+                  <node path="/configuration/system.web" action="update" key="path" collision="overwrite">
+                    <membership defaultProvider="AspNetSqlMembershipProvider" userIsOnlineTimeWindow="15"></membership>
+                  </node>
+                  <node path="/configuration/system.web/membership" action="update" key="path" collision="overwrite">
+                    <providers></providers>
+                  </node>
+                  <node path="/configuration/system.web/membership/providers" action="update" key="path" collision="overwrite">
+                    <clear/>
+                  </node>
+                  <node path="/configuration/system.web/membership/providers" action="update" key="path" collision="overwrite">
+                    <add name="AspNetSqlMembershipProvider" type="System.Web.Security.SqlMembershipProvider" connectionStringName="SiteSqlServer" enablePasswordRetrieval="false" enablePasswordReset="true" requiresQuestionAndAnswer="false" minRequiredPasswordLength="7" minRequiredNonalphanumericCharacters="0" requiresUniqueEmail="false" passwordFormat="Hashed" applicationName="DotNetNuke" description="Stores and retrieves membership data from the local Microsoft SQL Server database" />
+                  </node>
+                </nodes>
+              </configuration>
+            </uninstall>
+          </config>
+        </component>
+        <component type="Assembly">
+          <assemblies>
+            <basePath>bin</basePath>
+            <assembly>
+              <name>LatchMembership.dll</name>
+            </assembly>
+            <assembly>
+              <name>LatchSDK.dll</name>
+            </assembly>            
+			<assembly>
+              <name>LatchDotNetNukePlugin.dll</name>
+            </assembly>
+          </assemblies>
+        </component>
+        <component type="ResourceFile">
+          <resourceFiles>
+            <basePath>DesktopModules\LatchDotNetNukePlugin</basePath>
+            <resourceFile>
+              <name>resources.zip</name>
+            </resourceFile>
+          </resourceFiles>
+        </component>
+      </components>
+    </package>
+  </packages>
+</dotnetnuke>
