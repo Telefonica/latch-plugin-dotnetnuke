@@ -15,8 +15,8 @@
       <components>
         <component type="Module">
           <desktopModule>
-            <moduleName>LatchDotNetNukePlugin</moduleName>
-            <foldername>LatchDotNetNukePlugin</foldername>
+            <moduleName>Latch</moduleName>
+            <foldername>Latch</foldername>
             <businessControllerClass />
             <supportedFeatures />
             <moduleDefinitions>
