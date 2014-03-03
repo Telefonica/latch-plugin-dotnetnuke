@@ -12,7 +12,7 @@ INSTALLING THE MODULE IN DOTNETNUKE 7.
 
 Go to Host->Extensions, then click on the button Install Extensions Manager, upload the zip the Latch plugin.
 
-Read the plugin information and the license agreement, then click on 'Accept License'.
+Read the plugin information and the license agreement, check on 'Accept License' and click Next, click Finish when the installation finishes.
 
 Go back to Extensions page, check that the Latch module is on the list.
 
@@ -23,3 +23,11 @@ Click on Modules->Add new module, search for Latch Plugin on the list and drag i
 Open Edit Mode, put your mouse over the Latch module and go into 'configuration'.
 
 Click on 'Latch Plugin Settings' and introduce there the AppId and AppSecret you got from latch's page.
+
+UNINSTALLING THE MODULE
+
+Go to Host->Extensions, search for 'Latch Plugin' on the module list.
+
+Click on the 'delete' icon with the paper bin shape.
+
+Follow the steps in the modal window, check 'Delete Files' and click Next, then click finish when the uninstallation is completed.
