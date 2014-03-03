@@ -1,33 +1,39 @@
-LATCH DOTNETNUKE 7 PLUGIN -- INSTALLATION GUIDE
+#LATCH INSTALLATION GUIDE FOR DOTNETNUKE
 
-####PREREQUISITES####
 
-DotNetNuke version 7.
+##PREREQUISITES 
+* DotNetNuke version 7.
 
-.Net Framework 4.0 or higher.
+* .Net Framework version 4.0 or higher.
 
-To get the "Application ID" and "Secret", (fundamental values for integrating Latch in any application), it’s necessary to register a developer account in Latch's website: https://latch.elevenpaths.com. On the upper right side, click on "Developer area".
+* To get the **"Application ID"** and **"Secret"**, (fundamental values for integrating Latch in any application), it’s necessary to register a developer account in [Latch's website](https://latch.elevenpaths.com"https://latch.elevenpaths.com"). On the upper right side, click on **"Developer area"**. 
 
-INSTALLING THE MODULE IN DOTNETNUKE 7.
 
-Go to Host->Extensions, then click on the button Install Extensions Manager, upload the zip the Latch plugin.
+##DOWNLOADING THE DOTNETNUKE PLUGIN
+ * When the account is activated, the user will be able to create applications with Latch and access to developer documentation, including existing SDKs and plugins. The user has to access again to [Developer area](https://latch.elevenpaths.com/www/developerArea"https://latch.elevenpaths.com/www/developerArea"), and browse his applications from **"My applications"** section in the side menu.
 
-Read the plugin information and the license agreement, check on 'Accept License' and click Next, click Finish when the installation finishes.
+* When creating an application, two fundamental fields are shown: **"Application ID"** and **"Secret"**, keep these for later use. There are some additional parameters to be chosen, as the application icon (that will be shown in Latch) and whether the application will support OTP  (One Time Password) or not. For DotNetNuke the OTP must be disabled.
 
-Go back to Extensions page, check that the Latch module is on the list.
+* From the side menu in developers area, the user can access the **"Documentation & SDKs"** section. Inside it, there is a **"SDKs and Plugins"** menu. Links to different SDKs in different programming languages and plugins developed so far, are shown.
 
-Click on Pages->Add New Page, introduce a name and title related to 'Latch' or 'Security', and 'latch' as the URL. Set as parent page 'Any parent' and give view permissions to registered users.
+##INSTALLING THE PLUGIN IN DOTNETNUKE
+* Go to **"Host->Extensions"**, then press **"Install Extensions Manager"**, upload the zip with Latch plugin.
 
-Click on Modules->Add new module, search for Latch Plugin on the list and drag it to the new page you just created.
+* Read the plugin information and the license agreement, then click on **"Accept License"**.
 
-Open Edit Mode, put your mouse over the Latch module and go into 'configuration'.
 
-Click on 'Latch Plugin Settings' and introduce there the AppId and AppSecret you got from latch's page.
+##CONFIGURING THE INSTALLED PLUGIN
+* Go back to Extensions page, check that the Latch module is on the list.
 
-UNINSTALLING THE MODULE
+* Click on **"Pages->Add New Page"**, introduce a name, title and URL. Set as parent page to **"None Specified"** and give view permissions to registered users.
 
-Go to Host->Extensions, search for 'Latch Plugin' on the module list.
+* Click on **"Modules->Add new module"**, search for Latch Plugin on the list and drag and drop it into the new page you just created.
 
-Click on the 'delete' icon with the paper bin shape.
+* Open **"Edit Mode"**, place the mouse over the Latch module and go into **"Settings"**.
 
-Follow the steps in the modal window, check 'Delete Files' and click Next, then click finish when the uninstallation is completed.
+* Click on **"Latch Plugin Settings"** and introduce there the **"AppID"** and **"AppSecret"** you got from Latch's page.
+
+
+##UNINSTALLING THE PLUGIN IN DOTNETNUKE
+* Go to **"Host-Extension"**. Plugin "Latch" appears in the list. Press on **"Uninstall"** on the right side. Check the **"Delete files?"** option in the end of the new window. Press **"Uninstall Package"** button.
+
