@@ -37,3 +37,16 @@
 ##UNINSTALLING THE PLUGIN IN DOTNETNUKE
 * Go to **"Host-Extension"**. Plugin "Latch" appears in the list. Press on **"Uninstall"** on the right side. Check the **"Delete files?"** option in the end of the new window. Press **"Uninstall Package"** button.
 
+
+##USE OF LATCH MODULE FOR THE USERS
+**Latch does not affect in any case or in any way the usual operations with an account. It just allows or denies actions over it, acting as an independent extra layer of security that, once removed or without effect, will have no effect over the accounts, that will remain with its original state.**
+
+The user needs the Latch application installed on the phone, and follow these steps:
+
+* **Step 1:** Logged in your own account, go to the DotNetNuke page created by the administrator to pair accounts with Latch. The name of the page is set by the administrator so it may vary.
+
+* **Step 2:** From the Latch app on the phone, the user has to generate the token, pressing on **“generate pairing code to add service"** at the bottom of the application.
+
+* **Step 3:** The user has to type the characters generated on the phone into the text box displayed on the web page. Click on **"Pair"** button.
+
+* **Step 4:** Now the user may lock and unlock the account, preventing any unauthorized access.
