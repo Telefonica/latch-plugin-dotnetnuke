@@ -1,4 +1,0 @@
-C:\Users\sergio.jimenez\Documents\bin\LatchDotNetNukePlugin.dll
-C:\Users\sergio.jimenez\Documents\bin\LatchDotNetNukePlugin.pdb
-C:\Users\sergio.jimenez\Documents\My Web Sites\LatchDotNetNukePlugin\obj\Release\LatchDotNetNukePlugin.dll
-C:\Users\sergio.jimenez\Documents\My Web Sites\LatchDotNetNukePlugin\obj\Release\LatchDotNetNukePlugin.pdb
