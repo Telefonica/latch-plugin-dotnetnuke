@@ -1,5 +1,0 @@
-C:\Users\sergio.jimenez\Documents\bin\LatchDotNetNukePlugin.dll
-C:\Users\sergio.jimenez\Documents\bin\LatchDotNetNukePlugin.pdb
-C:\Users\sergio.jimenez\Documents\My Web Sites\LatchDotNetNukePlugin\obj\Debug\LatchDotNetNukePlugin.dll
-C:\Users\sergio.jimenez\Documents\My Web Sites\LatchDotNetNukePlugin\obj\Debug\LatchDotNetNukePlugin.pdb
-C:\Users\sergio.jimenez\Documents\My Web Sites\LatchDotNetNukePlugin\obj\Debug\LatchDotNetNukePlugin.csprojResolveAssemblyReference.cache
